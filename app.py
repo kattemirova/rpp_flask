@@ -8,7 +8,7 @@ db = SQLAlchemy()
 app = Flask(__name__)
 
 app.secret_key = "123"
-user_db = "postgres"
+user_db = "temirova"
 host_ip = "127.0.0.1"
 host_port = "5432"
 database_name = "rpp_flask"
@@ -39,7 +39,7 @@ def load_user(user_id):
 @app.route("/")
 def index():
     if current_user.is_authenticated:
-        return render_template('index.html', name=current_user.name)
+        return render_template('index.html')
     return redirect(url_for('login'))
 
 @app.route("/login", methods = ["GET", "POST"])
