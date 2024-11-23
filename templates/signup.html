@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Темирова Екатерина, Пахомова Валерия</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <main>
+        <form method="POST">
+            <h1>Страница регистрации</h1>
+            <div class="error">{{ errors }}</div>
+            <div>
+                <label for="email">Почта</label>
+                <input type="text" name="email">
+              </div>
+            <div>
+                <label for="name">Логин</label>
+                <input type="text" name="name">
+            </div>
+            <div>
+                <label for="password">Пароль</label>
+                <input type="text" name="password">
+            </div>
+            <button type="submit">Зарегистрироваться</button>
+            <a href="{{ url_for('login') }}">Уже есть аккаунт</a>
+        </form>
+    </main>
+
+    <footer>
+        &copy; Темирова Екатерина, Пахомова Валерия, ФБИ-11, 4 курс, 2024
+    </footer>
+</body>
+</html>
